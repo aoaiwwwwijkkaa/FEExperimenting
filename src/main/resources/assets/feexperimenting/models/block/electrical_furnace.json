@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "feexperimenting:block/generator_bottom",
+    "up": "feexperimenting:block/electrical_furnace_top_lit",
+    "down": "feexperimenting:block/generator_bottom",
+    "east": "feexperimenting:block/electrical_furnace_right",
+    "north": "feexperimenting:block/electrical_furnace_front_back",
+    "south": "feexperimenting:block/generator_bottom",
+    "west": "feexperimenting:block/generator_bottom"
+  }
+}

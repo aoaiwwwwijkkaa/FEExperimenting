@@ -1,0 +1,9 @@
+{
+  "type": "feexperimenting:electrical_furnace",
+  "ingredient": {
+    "item": "minecraft:rabbit"
+  },
+  "result": {
+    "id": "minecraft:cooked_rabbit"
+  }
+}

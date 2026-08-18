@@ -1,0 +1,9 @@
+{
+  "type": "feexperimenting:electrical_freezer",
+  "ingredient": {
+    "item": "minecraft:water_bucket"
+  },
+  "result": {
+    "id": "minecraft:ice"
+  }
+}

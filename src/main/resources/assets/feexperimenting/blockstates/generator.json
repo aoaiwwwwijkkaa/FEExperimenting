@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model":  "feexperimenting:block/generator"},
+    "facing=east": { "model":  "feexperimenting:block/generator", "y": 90},
+    "facing=south": { "model":  "feexperimenting:block/generator","y": 180},
+    "facing=west": { "model":  "feexperimenting:block/generator","y": 270}
+  }
+}

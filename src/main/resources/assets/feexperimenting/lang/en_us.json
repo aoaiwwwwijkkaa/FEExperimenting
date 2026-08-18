@@ -1,0 +1,29 @@
+{
+  "feexperimenting.configuration.title": "FE Experimenting Config",
+  "feexperimenting.configuration.section.feexperimenting.server.toml": "FE Experimenting Server Config",
+  "feexperimenting.configuration.generator_gen.tooltip": "Description says it.",
+  "feexperimenting.configuration.section.feexperimenting.server.toml.title": "Server Config",
+  "feexperimenting.configuration.generator_gen": "Generator Generation Amount",
+
+  "block.feexperimenting.generator": "Oxygen FE Generator",
+  "block.feexperimenting.electrical_furnace": "Electrical Furnace",
+  "block.feexperimenting.electrical_freezer": "Electrical Freezer",
+
+  "item.feexperimenting.energy_detector": "FE Measurer",
+
+  "feexperimenting.feex_tab.title": "FE Experimenting",
+
+  "feexperimenting.ponder.generator_ponder.header": "Generating FE",
+  "feexperimenting.ponder.energy_d_ponder.header": "Seeing current FE",
+  "feexperimenting.ponder.generator_ponder.text_1": "This is the generator.",
+  "feexperimenting.ponder.generator_ponder.text_2": "If it is blocked from above, it wont work.",
+  "feexperimenting.ponder.generator_ponder.text_3": "This is the power source.",
+
+  "feexperimenting.ponder.tag.fe_sources": "FE Sources",
+  "feexperimenting.ponder.tag.fe_sources.description": "Blocks that make FE",
+  "feexperimenting.ponder.tag.utils": "Utilities",
+  "feexperimenting.ponder.tag.utils.description": "Utilities that help you figure out something",
+
+  "feexperimenting.freezer.tooltip": "FE goes in, freezing stuff comes out.",
+  "feexperimenting.furnace.tooltip": "FE goes in, cooked stuff comes out."
+}

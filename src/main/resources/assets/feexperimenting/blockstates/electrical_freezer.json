@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model":  "feexperimenting:block/electrical_freezer"},
+    "facing=east": { "model":  "feexperimenting:block/electrical_freezer", "y": 90},
+    "facing=south": { "model":  "feexperimenting:block/electrical_freezer","y": 180},
+    "facing=west": { "model":  "feexperimenting:block/electrical_freezer","y": 270}
+  }
+}

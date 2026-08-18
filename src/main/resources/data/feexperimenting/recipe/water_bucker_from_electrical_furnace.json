@@ -1,0 +1,10 @@
+{
+  "type": "feexperimenting:electrical_furnace",
+  "ingredient": {
+    "tag": "minecraft:ice"
+  },
+  "result": {
+    "id": "minecraft:water_bucket",
+    "count": 2
+  }
+}
