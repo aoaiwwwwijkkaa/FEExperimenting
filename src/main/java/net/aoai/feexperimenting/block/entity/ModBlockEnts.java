@@ -43,6 +43,16 @@ public class ModBlockEnts {
                             )
             );
 
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FEBatteryBlockEntity>> FE_BATTERY_BLOCK_ENTITY_TYPE =
+            BLOCK_ENTITIES.register("fe_battery_block_entity", () ->
+                    BlockEntityType.Builder.of(
+                                    FEBatteryBlockEntity::new,
+                                    ModBlocks.FE_BATTERY.get())
+                            .build(
+                                    (com.mojang.datafixers.types.Type<?>) null
+                            )
+            );
+
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

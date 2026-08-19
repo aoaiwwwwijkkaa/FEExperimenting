@@ -1,0 +1,8 @@
+{
+  "detector_buzz": {
+    "subtitle": "sounds.feexperimenting.detector_buzz.subtitle",
+    "sounds": [
+      "feexperimenting:detector_buzz"
+    ]
+  }
+}

@@ -8,6 +8,7 @@
   "block.feexperimenting.generator": "Oxygen FE Generator",
   "block.feexperimenting.electrical_furnace": "Electrical Furnace",
   "block.feexperimenting.electrical_freezer": "Electrical Freezer",
+  "block.feexperimenting.fe_battery": "FE Battery",
 
   "item.feexperimenting.energy_detector": "FE Measurer",
 
@@ -15,15 +16,23 @@
 
   "feexperimenting.ponder.generator_ponder.header": "Generating FE",
   "feexperimenting.ponder.energy_d_ponder.header": "Seeing current FE",
+  "feexperimenting.ponder.fe_battery_ponder.header": "Storing and extracting FE",
   "feexperimenting.ponder.generator_ponder.text_1": "This is the generator.",
   "feexperimenting.ponder.generator_ponder.text_2": "If it is blocked from above, it wont work.",
   "feexperimenting.ponder.generator_ponder.text_3": "This is the power source.",
 
   "feexperimenting.ponder.tag.fe_sources": "FE Sources",
   "feexperimenting.ponder.tag.fe_sources.description": "Blocks that make FE",
+  "feexperimenting.ponder.tag.fe_consumers": "FE Consumers",
+  "feexperimenting.ponder.tag.fe_consumers.description": "Blocks that consume FE to either do something or nothing",
   "feexperimenting.ponder.tag.utils": "Utilities",
   "feexperimenting.ponder.tag.utils.description": "Utilities that help you figure out something",
 
   "feexperimenting.freezer.tooltip": "FE goes in, freezing stuff comes out.",
-  "feexperimenting.furnace.tooltip": "FE goes in, cooked stuff comes out."
+  "feexperimenting.furnace.tooltip": "FE goes in, cooked stuff comes out.",
+  "feexperimenting.battery.tooltip": "Its a battery.",
+  "feexperimenting.generator.tooltip": "The best start of a generator.,",
+  "feexperimenting.detector.tooltip": "Beep- no not exactly.",
+
+  "sounds.feexperimenting.detector_buzz.subtitle": "Detector buzz"
 }

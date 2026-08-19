@@ -2,7 +2,6 @@ package net.aoai.feexperimenting.ponder;
 
 import net.aoai.feexperimenting.FEExperimenting;
 import net.aoai.feexperimenting.block.ModBlocks;
-import net.aoai.feexperimenting.block.entity.GeneratorBlockEntity;
 import net.aoai.feexperimenting.item.ModItems;
 import net.createmod.catnip.math.Pointing;
 import net.createmod.ponder.api.registration.PonderPlugin;
@@ -26,6 +25,25 @@ public class ModPonderScenes implements PonderPlugin {
                 .addStoryBoard(ResourceLocation.fromNamespaceAndPath(FEExperimenting.MODID, "generator_ponder"), ModPonderScenes::generatorScript);
         helper.forComponents(ModItems.ENERGY_DETECTOR.getId())
                 .addStoryBoard(ResourceLocation.fromNamespaceAndPath(FEExperimenting.MODID, "energy_d_ponder"), ModPonderScenes::energyDetectorScript);
+        helper.forComponents(ModBlocks.FE_BATTERY.getId())
+                .addStoryBoard(ResourceLocation.fromNamespaceAndPath(FEExperimenting.MODID, "fe_battery_ponder"), ModPonderScenes::feBatteryScript);
+    }
+
+    public static void feBatteryScript(SceneBuilder scene, SceneBuildingUtil util) {
+        scene.title("fe_battery_ponder", "Storing and extracting FE");
+
+        scene.setNextUpEnabled(false);
+
+        scene.configureBasePlate(0,0,5);
+        scene.showBasePlate();
+        scene.idle(10);
+
+        scene.world().showSection(util.select().layersFrom(1), Direction.DOWN);
+        scene.idle(100);
+
+        scene.world().setBlock(new BlockPos(3,1,2), ModBlocks.ELECTRICAL_FURNACE.get().defaultBlockState(), true);
+
+        scene.idle(80);
     }
 
     public static void energyDetectorScript(SceneBuilder scene, SceneBuildingUtil util) {
@@ -37,11 +55,9 @@ public class ModPonderScenes implements PonderPlugin {
         scene.showBasePlate();
         scene.idle(10);
 
-        scene.world().showSection(util.select().layer(0), Direction.UP);
+        scene.world().showSection(util.select().layersFrom(1), Direction.DOWN);
         scene.idle(15);
         scene.rotateCameraY(45);
-
-        scene.world().showSection(util.select().layer(1), Direction.DOWN);
 
         scene.idle(20);
 
@@ -71,9 +87,7 @@ public class ModPonderScenes implements PonderPlugin {
         scene.showBasePlate();
         scene.idle(10);
 
-        scene.world().showSection(util.select().layer(0), Direction.UP);
-        scene.idle(15);
-        scene.world().showSection(util.select().layer(1), Direction.DOWN);
+        scene.world().showSection(util.select().layersFrom(1), Direction.DOWN);
 
         scene.idle(20);
 

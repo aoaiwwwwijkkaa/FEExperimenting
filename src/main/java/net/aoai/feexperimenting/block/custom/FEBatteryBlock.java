@@ -1,5 +1,6 @@
 package net.aoai.feexperimenting.block.custom;
 
+import net.aoai.feexperimenting.block.entity.FEBatteryBlockEntity;
 import net.aoai.feexperimenting.block.entity.GeneratorBlockEntity;
 import net.aoai.feexperimenting.block.entity.ModBlockEnts;
 import net.minecraft.core.BlockPos;
@@ -23,8 +24,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class GeneratorBlock extends Block implements EntityBlock {
-    public GeneratorBlock(Properties properties) {
+public class FEBatteryBlock extends Block implements EntityBlock {
+    public FEBatteryBlock(Properties properties) {
         super(properties);
 
         this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH));
@@ -34,15 +35,15 @@ public class GeneratorBlock extends Block implements EntityBlock {
 
     @Override
     public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
-        return new GeneratorBlockEntity(blockPos, blockState);
+        return new FEBatteryBlockEntity(blockPos, blockState);
     }
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
         if (level.isClientSide()) {return null;}
 
-        return type == ModBlockEnts.GENERATOR_BLOCK_ENTITY_TYPE.get()
-                ? (lvl,pos,st,be) -> ((GeneratorBlockEntity) be).tick(lvl,pos,st)
+        return type == ModBlockEnts.FE_BATTERY_BLOCK_ENTITY_TYPE.get()
+                ? (lvl,pos,st,be) -> ((FEBatteryBlockEntity) be).tick(lvl,pos,st)
                 : null;
     }
 
@@ -59,7 +60,7 @@ public class GeneratorBlock extends Block implements EntityBlock {
 
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-        tooltipComponents.add(Component.translatable("feexperimenting.generator.tooltip"));
+        tooltipComponents.add(Component.translatable("feexperimenting.battery.tooltip"));
 
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }

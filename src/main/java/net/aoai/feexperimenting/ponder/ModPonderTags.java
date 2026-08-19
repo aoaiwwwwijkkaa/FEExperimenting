@@ -13,6 +13,7 @@ public class ModPonderTags {
     public static final ResourceLocation
 
             FE_SOURCES = loc("fe_sources"),
+            FE_CONSUMERS = loc("fe_consumers"),
             UTILS = loc("utils");
 
     private static ResourceLocation loc(String id) {
@@ -27,11 +28,22 @@ public class ModPonderTags {
                 .description("Blocks that make FE")
                 .register();
 
+        helper.registerTag(FE_CONSUMERS)
+                 .addToIndex()
+                 .item(ModBlocks.ELECTRICAL_FURNACE.asItem(), true, true)
+                 .title("FE Consumers")
+                 .description("Blocks that consume FE to make something")
+                 .register();
+
         helper.registerTag(UTILS)
                 .addToIndex()
                 .item(ModItems.ENERGY_DETECTOR.asItem(), true, true)
                 .title("Utilities")
                 .description("Utilities that help you figure out something")
                 .register();
+
+        helper.addToTag(UTILS).add(ModBlocks.FE_BATTERY.getId());
+        helper.addToTag(FE_CONSUMERS).add(ModBlocks.ELECTRICAL_FREEZER.getId());
+        helper.addToTag(FE_CONSUMERS).add(ModBlocks.FE_BATTERY.getId());
     }
 }

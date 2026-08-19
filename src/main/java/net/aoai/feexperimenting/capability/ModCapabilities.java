@@ -20,6 +20,12 @@ public class ModCapabilities {
 
         event.registerBlockEntity(
                 Capabilities.EnergyStorage.BLOCK,
+                ModBlockEnts.FE_BATTERY_BLOCK_ENTITY_TYPE.get(),
+                (blockent, direct) -> blockent.getStorage()
+        );
+
+        event.registerBlockEntity(
+                Capabilities.EnergyStorage.BLOCK,
                 ModBlockEnts.ELECTRICAL_FURNACE_BLOCK_ENTITY_TYPE.get(),
                 (blockEntity, direction) -> blockEntity.getStorage()
         );

@@ -3,6 +3,7 @@ package net.aoai.feexperimenting.block;
 import net.aoai.feexperimenting.FEExperimenting;
 import net.aoai.feexperimenting.block.custom.ElectricalFreezerBlock;
 import net.aoai.feexperimenting.block.custom.ElectricalFurnaceBlock;
+import net.aoai.feexperimenting.block.custom.FEBatteryBlock;
 import net.aoai.feexperimenting.block.custom.GeneratorBlock;
 import net.aoai.feexperimenting.block.entity.ModBlockEnts;
 import net.aoai.feexperimenting.item.ModItems;
@@ -32,6 +33,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> ELECTRICAL_FREEZER = regBlock("electrical_freezer",
             () -> new ElectricalFreezerBlock(BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+
+    public static final DeferredBlock<Block> FE_BATTERY = regBlock("fe_battery",
+            () -> new FEBatteryBlock(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
     private static <T extends Block> DeferredBlock<T> regBlock(String name, Supplier<T> block) {
         DeferredBlock<T> returnal = BLOCKS.register(name, block);

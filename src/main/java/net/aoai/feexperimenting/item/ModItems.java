@@ -11,7 +11,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FEExperimenting.MODID);
 
     public static final DeferredItem<Item> ENERGY_DETECTOR = ITEMS.register("energy_detector",
-            () -> new EnergyDetector(new Item.Properties().stacksTo(1).durability(50)));
+            () -> new EnergyDetector(new Item.Properties().stacksTo(8).durability(100)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

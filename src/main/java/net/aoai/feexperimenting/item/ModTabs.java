@@ -23,6 +23,7 @@ public class ModTabs {
                         output.accept(ModBlocks.GENERATOR.asItem());
                         output.accept(ModBlocks.ELECTRICAL_FREEZER.asItem());
                         output.accept(ModBlocks.ELECTRICAL_FURNACE.asItem());
+                        output.accept(ModBlocks.FE_BATTERY.asItem());
                         output.accept(ModItems.ENERGY_DETECTOR);
                     })
                     .build());
